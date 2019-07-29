@@ -1,16 +1,16 @@
-import React, { Component } from "react";
-import { InputAddress } from "./styles";
+import React, { Component } from 'react';
+import { InputAddress } from './styles';
 
-import api from "../../../services/api";
+import api from '../../../services/api';
 
 class Address extends Component {
   state = {
-    CEP: "",
-    Cidade: "",
-    Estado: "",
-    Complemento: "",
-    Endereco: "",
-    Numero: ""
+    CEP: '',
+    Cidade: '',
+    Estado: '',
+    Complemento: '',
+    Endereco: '',
+    Numero: '',
   };
 
   handleCEPChange = e => {
@@ -48,7 +48,7 @@ class Address extends Component {
       Cidade: response.data.cidade,
       Endereco: response.data.logradouro,
       Estado: response.data.estado,
-      Complemento: response.data.bairro
+      Complemento: response.data.bairro,
     });
   };
 
@@ -57,7 +57,7 @@ class Address extends Component {
 
     return (
       <form onSubmit={this.handleSubmit}>
-        <h1>Endereçooo</h1>
+        <h1>Endereço</h1>
         <InputAddress>
           <input
             type="text"
